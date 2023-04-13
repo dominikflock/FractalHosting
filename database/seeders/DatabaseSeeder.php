@@ -27,13 +27,6 @@ class DatabaseSeeder extends Seeder
             "password" => md5("test"),
         ]);
 
-        \App\Models\User::create([
-            "firstname" => "Thomas",
-            "lastname" => "Kirchmann",
-            "email" => "tk@someoner.de",
-            "password" => md5("test"),
-        ]);
-
         $roleGroup__system = \App\Models\PermissionGroup::create([
             "name" => "System",
         ]);
