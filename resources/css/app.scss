@@ -1,0 +1,111 @@
+@import 'partials/colors';
+@import 'partials/form';
+@import 'partials/box';
+@import 'partials/popup';
+
+/* ==========================================================================
+    Settings
+========================================================================== */
+$mobile-max-width: 970px;
+
+/* ==========================================================================
+    Antialias
+========================================================================== */
+* {
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+/* ==========================================================================
+    Body
+    Padding/Margin correcture to avoid overflow
+========================================================================== */
+body {
+    font-family: 'Nunito';
+    background-color: $color-background;
+    color: $color;
+    padding: 0;
+    margin: 0;
+    > .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+/* ==========================================================================
+    A-Tag
+========================================================================== */
+a {
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+/* ==========================================================================
+    CSS Grid
+========================================================================== */
+$sidebar-width: 250px;
+$sidebar-padding: 30px;
+$sidebar-border-width: 1px;
+$content-padding: $sidebar-padding;
+
+body > .container-fluid {
+    display: grid;
+    grid-auto-columns: 1fr; 
+    grid-template-columns: $sidebar-width + $sidebar-border-width + ($sidebar-padding * 2) 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "sidebar content";
+    &.no-sidebar {
+        grid-template-columns: 1fr;
+        grid-template-areas: "content";
+    }
+    > .sidebar {
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
+        grid-area: sidebar;
+        position: fixed;
+        width: $sidebar-width;
+        overflow-y: scroll;
+        height: 100vh;
+        border-right: $sidebar-border-width solid $color-sidebar-border;
+        padding: $sidebar-padding;
+    }
+    > .content {
+        grid-area: content;
+        padding: $content-padding;
+    }
+    @media (max-width: $mobile-max-width) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas: "content";
+        > .sidebar {
+            display: none;
+        }
+    }
+}
+
+/* ==========================================================================
+    Font
+========================================================================== */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../fonts/Nunito-Bold.ttf') format('woff2');
+}
+
+/* ==========================================================================
+    Utility
+========================================================================== */
+.text-center {
+    text-align: center;
+}
+.w-100 {
+    width: 100%;
+}
+.hidden {
+    display: none !important;
+}

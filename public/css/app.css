@@ -1,0 +1,385 @@
+/* ==============================
+    Base Colors
+============================== */
+/* ==============================
+    Sidebar Colors (app.scss)
+============================== */
+/* ==============================
+    Area Colors (box.scss)
+============================== */
+/* ==============================
+    Form Colors (form.scss)
+============================== */
+/* ==========================================================================
+    Form Components CSS
+========================================================================== */
+form {
+  position: relative;
+}
+
+h1, h2, h3, h4, h5 {
+  color: rgb(186, 193, 200);
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+label {
+  color: rgb(186, 193, 200);
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+p {
+  color: rgb(186, 193, 200);
+}
+
+hr {
+  border-bottom: 1px solid rgb(45, 47, 54);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+a:not(.btn) {
+  cursor: pointer;
+  position: relative;
+  color: rgb(120, 104, 216);
+  background-color: transparent;
+  border-radius: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+a:not(.btn):hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(120, 104, 216);
+}
+a:not(.btn).menuitem {
+  display: block;
+  padding: 5px 5px;
+  color: rgb(186, 193, 200);
+  border: 2px solid transparent;
+  margin: 3px 0;
+}
+a:not(.btn).menuitem:hover {
+  background-color: transparent;
+  border: 2px solid rgb(120, 104, 216);
+  padding-left: 10px;
+}
+a:not(.btn).menuitem.active {
+  background-color: rgb(120, 104, 216);
+  color: rgb(255, 255, 255);
+  padding-left: 10px;
+}
+a:not(.btn):active, a:not(.btn):focus {
+  outline: none;
+  background-color: rgba(120, 104, 216, 0.2);
+}
+a:not(.btn) > span {
+  position: absolute;
+  display: inline-block;
+  padding: 2px 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 2px;
+  right: 3px;
+  background-color: rgb(120, 104, 216);
+}
+a:not(.btn).active > span {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+a.btn, button.btn {
+  display: inline-block;
+  padding: 8px 13px;
+  font-family: "Nunito";
+  font-size: 0.9rem;
+  border-radius: 20px;
+  border: none;
+  transition: 0.2s;
+  background-color: transparent;
+  color: rgb(186, 193, 200);
+  border: 2px solid transparent;
+}
+a.btn:not(:disabled), button.btn:not(:disabled) {
+  cursor: pointer;
+}
+a.btn.btn-block, button.btn.btn-block {
+  display: block;
+}
+a.btn:active, a.btn:focus, button.btn:active, button.btn:focus {
+  outline: none;
+}
+a.btn.btn-primary, button.btn.btn-primary {
+  background-color: rgb(120, 104, 216);
+  color: rgb(255, 255, 255);
+}
+a.btn.btn-primary:hover, button.btn.btn-primary:hover {
+  background-color: rgb(94, 80, 170);
+}
+a.btn.btn-default, button.btn.btn-default {
+  border: 2px solid rgb(94, 80, 170);
+}
+a.btn.btn-default:hover, button.btn.btn-default:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(94, 80, 170);
+}
+
+textarea,
+:not(label) > input,
+select {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-color: rgb(59, 63, 73);
+  color: rgb(235, 239, 243);
+  transition: 0.2s;
+  margin: 5px 0;
+}
+textarea:hover,
+:not(label) > input:hover,
+select:hover {
+  border-color: rgb(120, 104, 216);
+}
+textarea:active, textarea:focus,
+:not(label) > input:active,
+:not(label) > input:focus,
+select:active,
+select:focus {
+  outline: none;
+  border-color: rgb(120, 104, 216);
+}
+
+textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -12px; /* Centers thumb on the track */
+  background-color: rgb(120, 104, 216);
+  transform: translateY(50%);
+  border-radius: 1rem;
+  height: 1rem;
+  width: 1rem;
+}
+input[type=range]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+  background-color: rgb(120, 104, 216);
+  transform: translateY(50%);
+  border-radius: 1rem;
+  height: 1rem;
+  width: 1rem;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background: rgb(59, 63, 73);
+  height: 0.5rem;
+}
+input[type=range]::-moz-range-track {
+  background: rgb(59, 63, 73);
+  height: 0.5rem;
+}
+input[type=range]:hover, input[type=range]:focus {
+  border-color: transparent;
+}
+
+input[type=checkbox], input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* width: 2rem; */
+  width: 30px;
+  height: 15px;
+  transform: translateY(35%);
+  border: 2px solid rgb(120, 104, 216);
+  border-radius: 15px;
+  transition: 0.2s;
+}
+input[type=checkbox]:not(:checked), input[type=radio]:not(:checked) {
+  border-color: grey;
+}
+input[type=checkbox]:before, input[type=radio]:before {
+  position: absolute;
+  content: "";
+  background-color: grey;
+  height: 8px;
+  width: 8px;
+  aspect-ratio: 1/1;
+  border-radius: 1rem;
+  transform: translateY(19%);
+  transition: 0.2s;
+  left: 2px;
+}
+input[type=checkbox]:checked:before, input[type=radio]:checked:before {
+  /*left: 1.1rem;*/
+  left: 16px;
+  background-color: rgb(120, 104, 216);
+}
+
+@keyframes lenon {
+  0% {
+    width: 8px;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 8px;
+  }
+}
+/* ==========================================================================
+    Box CSS
+========================================================================== */
+.box {
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px 25px;
+  background-color: rgb(40, 45, 57);
+}
+.box hr {
+  border-color: rgb(34, 36, 44);
+}
+
+/* ==========================================================================
+    Popup CSS
+========================================================================== */
+.popup {
+  position: fixed;
+  z-index: 9999;
+  transition: 0.3s;
+  bottom: 0%;
+  left: 50%;
+  background-color: rgb(40, 45, 57);
+  opacity: 0;
+  transform: translateX(-50%);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.popup.active {
+  bottom: 100px;
+  opacity: 1;
+}
+
+/* ==========================================================================
+    Settings
+========================================================================== */
+/* ==========================================================================
+    Antialias
+========================================================================== */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+    Body
+    Padding/Margin correcture to avoid overflow
+========================================================================== */
+body {
+  font-family: "Nunito";
+  background-color: rgb(34, 36, 44);
+  color: rgb(186, 193, 200);
+  padding: 0;
+  margin: 0;
+}
+body > .container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* ==========================================================================
+    A-Tag
+========================================================================== */
+a {
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+/* ==========================================================================
+    CSS Grid
+========================================================================== */
+body > .container-fluid {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 311px 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "sidebar content";
+}
+body > .container-fluid.no-sidebar {
+  grid-template-columns: 1fr;
+  grid-template-areas: "content";
+}
+body > .container-fluid > .sidebar {
+  grid-area: sidebar;
+  position: fixed;
+  width: 250px;
+  overflow-y: scroll;
+  height: 100vh;
+  border-right: 1px solid rgb(45, 47, 54);
+  padding: 30px;
+}
+body > .container-fluid > .sidebar::-webkit-scrollbar {
+  width: 0px;
+}
+body > .container-fluid > .content {
+  grid-area: content;
+  padding: 30px;
+}
+@media (max-width: 970px) {
+  body > .container-fluid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "content";
+  }
+  body > .container-fluid > .sidebar {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+    Font
+========================================================================== */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/fonts/Nunito-Bold.ttf?f4338623f94e6079de978fb24c04d4c3) format("woff2");
+}
+/* ==========================================================================
+    Utility
+========================================================================== */
+.text-center {
+  text-align: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.hidden {
+  display: none !important;
+}

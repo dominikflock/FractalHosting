@@ -1,0 +1,224 @@
+/* ==========================================================================
+    Form Components CSS
+========================================================================== */
+form {
+    position: relative;
+}
+
+h1,h2,h3,h4,h5 {
+    color: $color-form_headings-color;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+label {
+    color: $color-form_label-color;
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+p {
+    color: $color-form_paragraph-color;
+}
+hr {
+    border-bottom: 1px solid $color-form_hr-border-color;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+a:not(.btn) {
+    cursor: pointer;
+    position: relative;
+    color: $color-form_a-color;
+    background-color: transparent;
+    border-radius: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    &:hover {
+        color: $color-form_a-hover-color;
+        background-color: $color-form_a-hover-background;
+    }
+    &.menuitem {
+        display: block;
+        padding: 5px 5px;
+        color: $color-form-a_menuitem-color;
+        border: 2px solid transparent;
+        margin: 3px 0;
+        &:hover {
+            background-color: transparent;
+            border: 2px solid $color-form-a_menuitem-border-color;
+            padding-left: 10px;
+        }
+        &.active {
+            background-color: $color-form-a_menuitem-active-background;
+            color: $color-form-a_menuitem-active-color;
+            padding-left: 10px;
+        }
+    }
+    &:active, &:focus {
+        outline: none;
+        background-color: $color-form-a_menuitem-focus-background;
+    }
+    > span {
+        position: absolute;
+        display: inline-block;
+        padding: 2px 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 2px;
+        right: 3px;
+        background-color: $color-form-a_menuitem_span-background;
+    }
+    &.active {
+        > span {
+            background-color: $color-form-a_menuitem-active_span-background;
+            color: $color-form-a_menuitem-active_span-color;
+        }
+    }
+}
+a.btn, button.btn {
+    display: inline-block;
+    padding: 8px 13px;
+    font-family: 'Nunito';
+    font-size: 0.9rem;
+    border-radius: 20px;
+    border: none;
+    transition: 0.2s;
+    background-color: transparent;
+    color: $color-form_btn-color;
+    border: 2px solid transparent;
+    &:not(:disabled) {
+        cursor: pointer;
+    }
+    &.btn-block {
+        display: block;
+    }
+    &:active, &:focus {
+        outline: none;
+    }
+    &.btn-primary {
+        background-color: $color-form_btn-primary-background;
+        color: $color-form_btn-primary-color;
+        &:hover {
+            background-color: $color-form_btn-primary-hover-background;
+        }
+    }
+    &.btn-default {
+        border: 2px solid $color-form_btn-default-border-color;
+        &:hover {
+            color: $color-form_btn-default-hover-color;
+            background-color: $color-form_btn-default-hover-background;
+        }
+    }
+}
+textarea, 
+:not(label) > input, 
+select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-color: $color-form_input-background;
+    color: $color-form_input-color;
+    transition: 0.2s;
+    margin: 5px 0;
+    &:hover {
+        border-color: $color-form_input-hover-border-color;
+    }
+    &:active, &:focus {
+        outline: none;
+        border-color: $color-form_input-active-focus-border-color;
+    }
+}
+textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100px;
+}
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        margin-top: -12px; /* Centers thumb on the track */
+        background-color: $color-form_input-select-thumb;
+        transform: translateY(50%);
+        border-radius: 1rem;
+        height: 1rem;
+        width: 1rem;    
+    }
+    &::-moz-range-thumb {
+        border: none; /*Removes extra border that FF applies*/
+        border-radius: 0; /*Removes default border-radius that FF applies*/
+        background-color: $color-form_input-select-thumb;
+        transform: translateY(50%);
+        border-radius: 1rem;
+        height: 1rem;
+        width: 1rem;
+    }
+    &::-webkit-slider-runnable-track {
+        background: $color-form_input-background;
+        height: 0.5rem;
+    }
+    &::-moz-range-track {
+        background: $color-form_input-background;
+        height: 0.5rem;
+    }
+    &:hover, &:focus {
+        border-color: transparent;
+    }
+}
+input[type=checkbox], input[type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* width: 2rem; */
+    width: 30px;
+    height: 15px;
+    transform: translateY(35%);
+    border: 2px solid $color-form_checkbox-checked-border-color;
+    border-radius: 15px;
+    transition: 0.2s;
+    &:not(:checked) {
+        border-color: $color-form_checkbox-unchecked-border-color;
+    }
+    &:before {
+        position: absolute;
+        content: '';
+        background-color: $color-form_checkbox-unchecked-dot-color;
+        height: 8px;
+        width: 8px;
+        aspect-ratio: 1/1;
+        border-radius: 1rem;
+        transform: translateY(19%);
+        transition: 0.2s;
+        left: 2px;
+    }
+    &:checked:before {
+        /*left: 1.1rem;*/
+        left: 16px;
+        background-color: $color-form_checkbox-checked-dot-color;
+    }
+}
+
+
+@keyframes lenon {
+    0% {
+        width: 8px;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 8px;
+    }
+}

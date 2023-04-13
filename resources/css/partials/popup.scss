@@ -1,0 +1,20 @@
+/* ==========================================================================
+    Popup CSS
+========================================================================== */
+.popup {
+    position: fixed;
+    z-index: 9999;
+    transition: 0.3s;
+    bottom: 0%;
+    left: 50%;
+    background-color: rgb(40, 45, 57);
+    opacity: 0;
+    transform: translateX(-50%);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    &.active {
+        bottom: 100px;
+        opacity: 1;
+    }
+}

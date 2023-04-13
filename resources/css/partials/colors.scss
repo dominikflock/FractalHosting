@@ -1,0 +1,59 @@
+/* ==============================
+    Base Colors
+============================== */
+$color-background: rgba(34, 36, 44, 1);
+$color: rgb(186, 193, 200);
+
+/* ==============================
+    Sidebar Colors (app.scss)
+============================== */
+$color-sidebar-border: rgba(45, 47, 54, 1);
+
+/* ==============================
+    Area Colors (box.scss)
+============================== */
+$color-box-background: rgba(40, 45, 57, 1);
+$color-box-color: rgba(235, 239, 243, 1);
+
+/* ==============================
+    Form Colors (form.scss)
+============================== */
+// Texts
+$color-form_headings-color: rgb(186, 193, 200);
+$color-form_paragraph-color: $color-form-headings-color;
+$color-form_label-color: $color-form-paragraph-color;
+// Buttons and Links
+$color-form_a-color: rgba(120, 104, 216, 1);
+$color-form_a-hover-color: rgb(255, 255, 255, 1);
+$color-form_a-hover-background: $color-form_a-color;
+$color-form_btn-color: rgb(186, 193, 200);
+$color-form_btn-primary-background: rgba(120, 104, 216, 1);
+$color-form_btn-primary-color: rgba(255, 125504, 255, 1);
+$color-form_btn-primary-hover-background: rgb(94, 80, 170);
+$color-form_btn-primary-hover-color: rgba(255, 255, 255, 1);
+$color-form_btn-default-border-color: rgb(94, 80, 170);
+$color-form_btn-default-hover-color: rgba(255, 255, 255, 1);
+$color-form_btn-default-hover-background: $color-form_btn-default-border-color;
+// HR
+$color-form_hr-border-color: rgba(45, 47, 54, 1);
+$color-form_box_hr-border-color: rgb(34, 36, 44);
+// Inputs
+$color-form_input-color: rgba(235, 239, 243, 1);
+$color-form_input-background: rgb(59, 63, 73);
+$color-form_input-hover-border-color: rgba(120, 104, 216, 1);
+$color-form_input-active-focus-border-color: $color-form_input-hover-border-color;
+$color-form_input-select-thumb: rgba(120, 104, 216, 1);
+// Special Classes
+$color-form-a_menuitem-color: rgb(186, 193, 200);
+$color-form-a_menuitem-border-color: rgba(120, 104, 216, 1);
+$color-form-a_menuitem-active-background: rgba(120, 104, 216, 1);
+$color-form-a_menuitem-active-color: rgba(255, 255, 255, 1);
+$color-form-a_menuitem-focus-background: rgba(120, 104, 216, 0.2);
+$color-form-a_menuitem_span-background: rgba(120, 104, 216, 1);
+$color-form-a_menuitem-active_span-background: rgba(255, 255, 255, 1);
+$color-form-a_menuitem-active_span-color: rgba(0,0,0,1);
+// Checkbox 
+$color-form_checkbox-unchecked-border-color: grey;
+$color-form_checkbox-unchecked-dot-color: grey;
+$color-form_checkbox-checked-border-color: rgba(120, 104, 216, 1);
+$color-form_checkbox-checked-dot-color: rgba(120, 104, 216, 1);
